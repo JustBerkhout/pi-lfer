@@ -1,0 +1,21 @@
+#!/bin/bash
+#hardcode source file name
+FILENAME="pi-hundred-thousand.txt"
+
+#determine length of source file in chars
+LENGTH=$(wc -m < "$FILENAME")
+
+# clear/init output file
+echo "" > pi-output.txt
+
+# loop through chars one by one.
+while IFS= read -r -n1 nextchar
+do
+    # print one character at a time
+	printf  "$nextchar" >> pi-output.txt
+
+	
+	((counter++))
+	if [ $(($counter % 500)) -lt 1 ]; then echo $counter; fi
+	
+done < "$FILENAME"
