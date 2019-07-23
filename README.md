@@ -8,3 +8,13 @@ A lazy way of "calculating" π
 ## so-urce
 
 The source of digits for `π` in this repository is the file `pi-hundred-thousand.txt` which has been pilfered from `pi-billion.txt` from [stuff.mit.edu](https://stuff.mit.edu/afs/sipb/contrib/pi/)
+
+## us-e
+
+```bash
+$ git clone [this-repo]
+$ cd this-repo
+$ ./pi-lfer
+```
+
+The script will (re-)create the file `pi-output.txt` and will report progress to `stdout`
